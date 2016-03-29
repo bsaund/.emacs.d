@@ -1,5 +1,6 @@
-(add-to-list 'load-path "~/.emacs.d/")
-(load "arduino-mode.el")
+;; (add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "c:/Users/Brad/AppData/Roaming/.emacs.d/lisp")
+;(load "arduino-mode.el")
 (autoload 'matlab-mode "matlab" "Matlab Editing Mode" t)
 (add-to-list
  'auto-mode-alist
@@ -29,11 +30,13 @@
 
 
 ; Save backups in a separate directory
-(setq
-   backup-by-copying t      ; don't clobber symlinks
+ (setq
+    backup-by-copying t      ; don't clobber symlinks
    backup-directory-alist
-    '(("." . "~/.saves"))    ; don't litter my fs tree
+     '(("." . "~/.saves"))    ; don't litter my fs tree
    delete-old-versions t
    kept-new-versions 6
    kept-old-versions 2
    version-control t)       ; use versioned backups
+
+ (cd "C:\\Users\\Brad\\Documents")
