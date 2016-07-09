@@ -1,5 +1,8 @@
 (add-to-list 'load-path "~/.emacs.d/")
 (load "arduino-mode.el")
+;; (load "protobuf-mode.el")
+(require 'protobuf-mode)
+
 (autoload 'matlab-mode "matlab" "Matlab Editing Mode" t)
 (add-to-list
  'auto-mode-alist
@@ -20,9 +23,13 @@
   ;; If there is more than one, they won't work right.
  )
 
+; highlighting for .proto files
+(add-to-list 'auto-mode-alist '("\\.proto$" . protobuf-mode))
 
 ; roslaunch highlighting
 (add-to-list 'auto-mode-alist '("\\.launch$" . xml-mode))
 (add-to-list 'auto-mode-alist '("\\.urdf$" . xml-mode))
 (add-to-list 'auto-mode-alist '("\\.sdf$" . xml-mode))
 (add-to-list 'auto-mode-alist '("\\.world$" . xml-mode))
+
+
