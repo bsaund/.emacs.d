@@ -1,4 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/")
+(require 'cl)
 (load "arduino-mode.el")
 (autoload 'matlab-mode "matlab" "Matlab Editing Mode" t)
 (add-to-list
