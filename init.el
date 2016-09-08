@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/lisp/")
 (require 'cl)
 (load "arduino-mode.el")
 (autoload 'matlab-mode "matlab" "Matlab Editing Mode" t)
