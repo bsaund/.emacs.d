@@ -1,4 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/lisp")
 (add-hook 'text-mode-hook' visual-line-mode)
 
 (require 'cl)
