@@ -1,20 +1,24 @@
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/lisp")
+;; (add-to-list 'load-path "~/.emacs.d/lisp/ein")
+(add-to-list 'load-path "~/.emacs.d/elpa")
 (add-hook 'text-mode-hook' visual-line-mode)
+
+(package-initialize)
 
 (require 'cl)
 
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(inhibit-startup-screen t))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(inhibit-startup-screen t)
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  )
 
 ;; setup custom for latex
@@ -30,6 +34,17 @@
 (add-to-list 'auto-mode-alist '("\\.sdf$" . xml-mode))
 (add-to-list 'auto-mode-alist '("\\.world$" . xml-mode))
 
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+
+; yaml syntax
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+
+; json syntax
+(require 'json-mode)
+(add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
+
 ;  arduino
 (load "arduino-mode.el")
 
@@ -41,6 +56,11 @@
 (setq matlab-indent-function t)
 (setq matlab-shell-command "matlab")
 
+; Python
+(setq python-indent 2)
+
+;; ; ein
+;; (require 'ein)
 
 
 ; Save backups in a separate directory
