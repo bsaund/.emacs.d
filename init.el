@@ -63,6 +63,13 @@
 (setq matlab-indent-function t)
 (setq matlab-shell-command "matlab")
 
+
+;; C++
+(setq-default c-default-style "linux"
+              c-basic-offset 4)
+(c-set-offset 'inline-open '0)
+
+
 ;; Python
 
 (add-hook 'python-mode-hook
@@ -96,8 +103,7 @@
 
 (global-set-key (kbd "C-c +") 'increment-number-at-point)
 
-(setq-default c-default-style "linux"
-              c-basic-offset 4)
+
 
 (setq-default indent-tabs-mode nil)
 
